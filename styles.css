@@ -1,2 +1,36 @@
 .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --darkCyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%); 
+    --grayishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+body {
+    background-color: var(--cream);
+    height: 100vh;
+}
+
+.product-preview {
+    display: flex;
+    justify-content: center;
+    height: inherit;
+    align-items: center;
+    
+}
+
+.container {
+    width: 480px;
+    background-color: var(--white);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.product-preview img {
+    width: 50%;
+}
