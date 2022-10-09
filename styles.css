@@ -1,8 +1,19 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --darkCyan: hsl(158, 36%, 37%);
+    --superDarkCyan: hsl(159, 45%, 18%); 
     --cream: hsl(30, 38%, 92%);
     --darkBlue: hsl(212, 21%, 14%); 
     --grayishBlue: hsl(228, 12%, 48%);
@@ -24,13 +35,98 @@ body {
 }
 
 .container {
-    width: 480px;
+    width: 600px;
     background-color: var(--white);
     display: flex;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
+}
+
+.info {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    color: var(--darkBlue);
+}
+
+.info #perfume {
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.info p {
+    font-size: 14px;
+    color: var(--grayishBlue);
+    line-height: 21px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price h1 {
+    color: var(--darkCyan);
+}
+
+.price h3 {
+    margin: 0 15px;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--grayishBlue);
+    text-decoration: line-through;
+}
+
+.cart-Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--darkCyan);
+}
+
+.cart-Btn:hover {
+    background-color: var(--superDarkCyan);
+    transition: 0.25s;
+}
+
+#cart {
+    width: 15px;
+    margin: 0 10px;
+}
+
+.cart-Btn h2 {
+    font-size: 14px;
+    color: var(--white);
 }
 
 .product-preview img {
     width: 50%;
+    height: fit-content;
 }
+
+
+@media only screen and (max-width: 600px)
+{
+    .container {
+        width: 375px;
+        flex-direction: column;
+    }
+
+    .product-preview img {
+    width: 100%;
+    height: fit-content;
+}
+}
+
